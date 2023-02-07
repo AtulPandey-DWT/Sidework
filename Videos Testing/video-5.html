@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* //GET THE GOOGLE FONT SPECIMEN
+    @import url(https://fonts.googleapis.com/css?family=Rubik); */
+
+    /* body,
+    html {
+      color: #fff;
+      text-align: center;
+      background: #fff;
+      font-family: Helvetica, sans-serif;
+      margin: 0;
+    } */
+
+    .list-x {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      /* overflow: hidden; */
+      white-space: nowrap;
+      transition: all 0.2s;
+      /*transform: scale(0.98);*/
+      will-change: transform;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    .list-x.active {
+      background: rgba(255, 255, 255, 0.3);
+      cursor: grabbing;
+      cursor: -webkit-grabbing;
+      /*transform: scale(0.99);*/
+    }
+
+    .item {
+      display: inline-block;
+      /* background: skyblue; */
+      min-height: 150px;
+      min-width: 250px;
+      /* max-height: 150px;
+      max-width: 200px; */
+      margin: 2px 5px;
+      border-radius: 10px;
+
+      /* -webkit-box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0, 0.75);
+      box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0, 0.75); */
+
+      -webkit-transition: 0.2s ease-in-out 0s;
+      -moz-transition: 0.2s ease-in-out 0s;
+      -o-transition: 0.2s ease-in-out 0s;
+    }
+
+    .list-x.active .item {
+      -webkit-box-shadow: inset 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+      box-shadow: inset 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+    }
+    video {
+      max-height: 550px;
+      max-width: 250px;
+      border-radius: 25px;
+    }
+    p.awards-para {
+      font-family: "Lexend Deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 24px;
+      color: #111111;
+    }
+  </style>
+  <body>
+    <div class="list-x">
+      <div class="item item1">
+        <div class="awards-img">
+          <video
+            src="https://cappi.app/wp-content/uploads/2022/09/Radwan_improves_its_cash_flow_with_cappi720p.mp4"
+            controls
+          ></video>
+        </div>
+        <p class="awards-para">Radwan improves<br />his cash flow</p>
+      </div>
+      <div class="item item2">
+        <div class="awards-img">
+          <video
+            src="https://cappi.app/wp-content/uploads/2022/09/Radwan_improves_its_cash_flow_with_cappi720p.mp4"
+            controls
+          ></video>
+        </div>
+        <p class="awards-para">Radwan improves<br />his cash flow</p>
+      </div>
+      <div class="item item3">
+        <div class="awards-img">
+          <video
+            src="https://cappi.app/wp-content/uploads/2022/09/Radwan_improves_its_cash_flow_with_cappi720p.mp4"
+            controls
+          ></video>
+        </div>
+        <p class="awards-para">Radwan improves<br />his cash flow</p>
+      </div>
+      <div class="item item3">
+        <div class="awards-img">
+          <video
+            src="https://cappi.app/wp-content/uploads/2022/09/Radwan_improves_its_cash_flow_with_cappi720p.mp4"
+            controls
+          ></video>
+        </div>
+        <p class="awards-para">Radwan improves<br />his cash flow</p>
+      </div>
+      <div class="item item4">
+        <div class="awards-img">
+          <video
+            src="https://cappi.app/wp-content/uploads/2022/09/Radwan_improves_its_cash_flow_with_cappi720p.mp4"
+            controls
+          ></video>
+        </div>
+        <p class="awards-para">Radwan improves<br />his cash flow</p>
+      </div>
+      <div class="item item5">
+        <div class="awards-img">
+          <video
+            src="https://cappi.app/wp-content/uploads/2022/09/Radwan_improves_its_cash_flow_with_cappi720p.mp4"
+            controls
+          ></video>
+        </div>
+        <p class="awards-para">Radwan improves<br />his cash flow</p>
+      </div>
+    </div>
+    <!-- <script>
+        const awardslider = document.querySelector(".list-x");
+        let isDown = TRUE;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener("mousedown", (e) => {
+            isDown = true;
+            awardslider.classList.add("active");
+            startX = e.pageX - awardslider.offsetLeft;
+            scrollLeft = awardslider.scrollLeft;
+        });
+        awardslider.addEventListener("mouseleave", () => {
+            isDown = false;
+            awardslider.classList.remove("active");
+        });
+        awardslider.addEventListener("mouseup", () => {
+            isDown = false;
+            awardslider.classList.remove("active");
+        });
+        awardslider.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - awardslider.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            awardslider.scrollLeft = scrollLeft - walk;
+            console.log(walk);
+        });
+        </script> -->
+  </body>
+</html>

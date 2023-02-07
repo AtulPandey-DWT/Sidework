@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #myDIV {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 20px;
+      }
+      #btn2 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body id="myBody">
+    <p>
+      Click the "Try it" button to toggle between hiding and showing the DIV
+      element:
+    </p>
+
+    <button id="btn1" onclick="myfunction1();">Dark Mode Activated</button>
+    <button id="btn2" onclick="myfunction2();">Return With Light Mode</button>
+
+    <div id="myDIV">This is my DIV element.</div>
+
+    <p>
+      <b>Note:</b> The element will not take up any space when the display
+      property set to "none".
+    </p>
+
+    <script>
+      var x = document.getElementById("myDIV");
+      var z = document.getElementById("btn2");
+      var y = document.getElementById("btn1");
+      myFunction();
+      function myFunction() {
+        // if (x.style.backgroundColor === "lightblue") {
+        //   console.log("ram");
+        // } else {
+        //   //   x.style.display = "none";
+        //   console.log("rasi");
+        //   z.style.display = "none";
+        // }
+        // if (y.style.display === "block") {
+        //   console.log("ram");
+        // } else {
+        //   z.style.display = "none";
+        //   console.log("rasi");
+        //   // z.style.display = "none";
+        // }
+      }
+      // let Body = document.getElementsByTagName("body");
+      let Body = document.getElementById("myBody");
+      function myfunction1() {
+        Body.style.backgroundColor = "black";
+        // console.log("dark mode activated");
+        y.style.display = "none";
+        z.style.display = "block";
+      }
+      function myfunction2() {
+        Body.style.backgroundColor = "white";
+        // console.log("light mode activated");
+        z.style.display = "none";
+        y.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

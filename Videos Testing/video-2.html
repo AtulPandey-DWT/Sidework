@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+    <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --expanding-color: #f42e79;
+    }
+    selector {
+      cursor: pointer;
+    }
+    selector .elementor-divider-separator:before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 14px);
+      left: calc(50% - 8px);
+      border: 25px solid #fff;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 0 solid transparent;
+      transition: all 0.3s ease-in-out;
+    }
+    selector.active .elementor-divider-separator:before {
+      opacity: 0;
+    }
+    selector .elementor-divider-separator:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--expanding-color);
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      border-radius: 100%;
+      transform: translate(0, 15px);
+      filter: blur(12px) opacity(0.4);
+      transition: all 0.5s ease-in-out;
+    }
+    selector.active .elementor-divider-separator:after {
+      filter: blur(0) opacity(1);
+      transform: translate(0, 0) scale(30);
+      transition: all 0.5s ease-in-out, filter 0.3s ease-in-out;
+    }
+    selector + * {
+      transition: all 0.3s ease-in-out;
+    }
+    selector.active + * {
+      opacity: 0;
+    }
+
+    :root {
+      --plyr-color-main: #f42e79;
+      --plyr-font-family: "Poppins";
+      --plyr-control-icon-size: 20px;
+    }
+    .plyr input[type="range"]::-webkit-slider-runnable-track {
+      box-shadow: none;
+    }
+    .plyr__control.plyr__control--overlaid {
+      height: 80px;
+      width: 80px !important;
+    }
+    .plyr__control.plyr__control--overlaid svg {
+      opacity: 0;
+    }
+    .plyr__control.plyr__control--overlaid:before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 14px);
+      left: calc(50% - 8px);
+      border: 25px solid #fff;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 0 solid transparent;
+      transition: all 0.3s ease-in-out;
+    }
+    @media (max-width: 767px) {
+      :root {
+        --plyr-control-icon-size: 18px;
+      }
+      .plyr__control.plyr__control--overlaid {
+        height: 50px;
+        width: 50px !important;
+      }
+      .plyr__control.plyr__control--overlaid:before {
+        top: calc(50% - 15px);
+        left: calc(50% - 10px);
+        transform: scale(0.7);
+      }
+      html.active {
+        overflow: hidden;
+      }
+    }
+    selector {
+      pointer-events: none;
+      max-width: 100vw;
+    }
+    selector.active {
+      pointer-events: initial;
+      background: var(--expanding-color);
+      transition: all 0.2s ease-in-out 0.3s;
+    }
+    selector .v-video {
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    selector.active .v-video {
+      transition: all 0.5s ease-in-out 0.2s;
+      transform: scale(1);
+      opacity: 1;
+    }
+    selector .v-close {
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+      cursor: pointer;
+    }
+    selector.active .v-close {
+      opacity: 1;
+      transition: all 0.5s ease-in-out 0.5s;
+    }
+  </style>
+  <body>
+    <video id="player-1" class="player">
+      <source
+        src="https://template.makedreamwebsite.com/wp-content/uploads/2022/07/pexels-tima-miroshnichenko-6860452.mp4"
+      />
+    </video>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      (function () {
+        const player = new Plyr(".player");
+        var $ = jQuery,
+          scrollLock = false,
+          scrollPos = 0;
+
+        $(document).ready(function () {
+          $(".v-play").on("click", function () {
+            var popup = $(this)
+              .closest(".e-container")
+              .nextAll(".v-popup")
+              .eq(0);
+
+            $(this).addClass("active");
+            popup.addClass("active");
+            $("html").addClass("active");
+            if (player) player.play();
+            scrollLock = true;
+            scrollPos = $(window).scrollTop();
+          });
+          $(".v-popup").on("click", function (e) {
+            if (
+              $(e.target).closest(".v-video").length ||
+              $(e.target).is(".v-video")
+            ) {
+              return;
+            }
+            $(".v-popup, .v-play").removeClass("active");
+
+            if (player) {
+              player.pause();
+              setTimeout(function () {
+                player.stop();
+                scrollLock = false;
+                $("html").removeClass("active");
+              }, 500);
+            }
+          });
+        });
+        $(window).on("scroll", function () {
+          if (scrollLock) $(window).scrollTop(scrollPos);
+        });
+      })();
+    </script>
+  </body>
+</html>

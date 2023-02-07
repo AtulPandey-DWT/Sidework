@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body.page-id-393 {
+        background: #fff;
+      }
+      section#development_service_sec {
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 56px);
+      }
+      #development_service_sec h3 {
+        font-size: 37px;
+        color: #000;
+      }
+      #development_service_sec h2 {
+        color: #1e1e1e;
+        font-size: 68px;
+        margin-bottom: 20px;
+      }
+      .development_button button {
+        font-size: 13px;
+        font-weight: 800;
+        background: #ff5c35;
+        padding: 20px 30px;
+      }
+      .development_button {
+        margin-top: 40px;
+      }
+      .purchasing_section_buttonPart a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500 !important;
+      }
+      /* 	Services Boxes */
+      section.services_section {
+        padding-bottom: 40px;
+      }
+      section.services_section .service_boxes {
+        display: flex;
+        justify-content: center;
+      }
+      .service_boxes .service_box {
+        width: 33.33%;
+        box-shadow: rgb(0 0 0 / 6%) 0px 0px 40px;
+        padding: 52px 35px 20px;
+        border-radius: 5px 0px 0px 5px;
+        margin-right: 20px;
+      }
+      .service_boxes .service_box:last-child {
+        margin-right: 0;
+      }
+      .service_boxes .service_box h3 {
+        font-size: 18px;
+        text-transform: none;
+        color: #222;
+        margin: 20px 0;
+      }
+      .service_boxes .service_box p {
+        color: #969696;
+        font-size: 15px;
+      }
+
+      /* 	Purchasing Section */
+      section.purchasing_section {
+        background-color: #d7e2fa;
+        padding: 80px 0px;
+      }
+      section.purchasing_section h2 {
+        color: #3a3a3a;
+        font-size: 30px;
+        margin-bottom: 16px;
+      }
+      section.purchasing_section h4 {
+        font-size: 19px;
+        color: #3a3a3a;
+      }
+      .purchasing_section_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      section.purchasing_section button {
+        background: #ff5c35;
+        border: 1px solid #ff5c35;
+        border-radius: 3px;
+        font-weight: 700;
+        color: #fff;
+      }
+      section#development_service_sec:after {
+        content: "";
+        background-image: url(/wp-content/uploads/2022/04/New-Project.png);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        width: 30%;
+        height: 20%;
+        background-size: cover;
+        background-position: center;
+        z-index: -1 !important;
+        position: absolute;
+        top: 50 px;
+        left: 5%;
+        opacity: 0.6;
+        transform: rotate(-71deg);
+      }
+
+      @media only screen and (max-width: 768px) {
+        section#development_service_sec {
+          height: auto;
+          padding: 60px;
+        }
+        section#development_service_sec:after {
+          left: 8%;
+        }
+        section.services_section .service_boxes {
+          width: 100% !important;
+        }
+        .service_boxes .service_box {
+          width: 49% !important;
+        }
+
+        section.services_section .service_boxes {
+          flex-wrap: wrap;
+        }
+        .service_boxes .service_box {
+          width: 50%;
+          margin-right: 0;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        html,
+        body {
+          overflow-x: hidden;
+        }
+        #development_service_sec h3 {
+          font-size: 37px;
+
+          font-weight: 400 !important;
+        }
+        #development_service_sec h2 {
+          font-size: 50px;
+        }
+        section#development_service_sec:after {
+          width: 56%;
+          height: 13%;
+
+          left: 20%;
+
+          object-fit: cover;
+        }
+        section.purchasing_section h2 {
+          font-size: 37px;
+        }
+
+        section#development_service_sec .development_img {
+          display: none;
+        }
+        .service_boxes .service_box {
+          width: 100%;
+        }
+        .service_boxes .service_box {
+          padding: 10px 0px;
+        }
+        section.services_section .service_boxes {
+          flex-direction: column;
+        }
+        .purchasing_section_inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        section.purchasing_section .purchasing_section_buttonPart {
+          margin-top: 35px;
+        }
+        section.purchasing_section {
+          padding: 60px 35px;
+        }
+      }
+    </style>
+    <section id="development_service_sec">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md-7 col-12">
+            <div class="development_content">
+              <h3>Our Blockchain Development Services for Business</h3>
+              <h2>Introducing Gigaflop TechLab</h2>
+              <p>
+                We're experts at creating dependable and secure blockchain
+                technology, and we'll make sure you get superior decentralized
+                solutions.
+              </p>
+              <div class="development_button">
+                <a href="#service"><button>LEARN MORE</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="development_img">
+              <img
+                class="img-fluid rounded"
+                src="/wp-content/uploads/2022/04/kindpng_1272596.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services_section" id="service">
+      <div class="container">
+        <div class="row">
+          <div class="service_boxes service_boxes-1">
+            <div class="service_box-4 service_box">
+              <div class="">
+                <img
+                  src="/wp-content/uploads/2022/04/nft-marketplace.png"
+                  alt=""
+                  width="54"
+                  height="54"
+                  title="icon-svc1"
+                />
+              </div>
+              <h3 class="">
+                <a href="https://gigafloptechlab.com/building-nft-marketplace/"
+                  >Building NFT Marketplace</a
+                >
+              </h3>
+              <p>
+                Our expertize with NFT Marketplace will help you start your own
+                NFT selling marketplace. From front end to back end, we cover it
+                all. We will help you with the white-level NFT MArketplaces,
+                E-commerce NFT Marketplace,NFT-Based ICO and anything you can
+                think about. Our end to end support and services are just what
+                you are looking for.
+              </p>
+            </div>
+            <div class="service_box-5 service_box">
+              <div class="">
+                <img
+                  src="/wp-content/uploads/2022/04/smart-contracts.png"
+                  alt=""
+                  width="46"
+                  height="51"
+                  title="icon-svc2"
+                />
+              </div>
+              <h3 class="">Smart Contract Development Service</h3>
+              <p>
+                When comes to Smart Contract, Gigaflop is the pro. Our
+                architects and developers are highly skilled in developing smart
+                contracts. We know how to effeciently program them. So, lets
+                faciliate the power of with Gigaflop's custom smart contract
+                development services.
+              </p>
+            </div>
+            <div class="service_box-6 service_box">
+              <div class="">
+                <img
+                  src="/wp-content/uploads/2022/04/decentralized.png"
+                  alt=""
+                  width="48"
+                  height="51"
+                  title="icon-svc3"
+                />
+              </div>
+              <h3 class="">Decentralized Applications</h3>
+              <p>
+                Decentralized applications are creating a new digital economy of
+                peer-to-peer services that removes power from monopolistic
+                companies. These work on the current exciting technology, that
+                is blockchain. Decentralized applications vary from traditional
+                applications. They don't rely on the standard client-server
+                network model. Gigaflop's develpers have polished themselves for
+                in dApps development and we would be happy to assist you with
+                the same.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="service_boxes service_boxes-2">
+            <div class="service_box-1 service_box">
+              <div class="">
+                <img
+                  src="//a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2019/03/icon-svc1.png"
+                  alt=""
+                  width="54"
+                  height="54"
+                  title="icon-svc1"
+                />
+              </div>
+              <h3 class="">
+                <a
+                  href="https://gigafloptechlab.com/nft-minting-website-development-services/"
+                  >NFT Minting Website Development Services</a
+                >
+              </h3>
+              <p>
+                We are an NFT Minting Platform Development Agency that would
+                help you get an amazing yet highly secured Minting website. Our
+                developers are there to listen your idea and implement it in
+                terms of an efficient, functial and responsive NFT Minting
+                website. Trust us, you will proud of your website!
+              </p>
+            </div>
+            <div class="service_box-2 service_box">
+              <div class="">
+                <img
+                  src="//a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2019/03/icon-svc2.png"
+                  alt=""
+                  width="46"
+                  height="51"
+                  title="icon-svc2"
+                />
+              </div>
+              <h3 class="">Uniswap Clone</h3>
+              <p>
+                If you are planning to buy a Uniswap clone script to launch a
+                DeFi exchange platform similar to Uniswap, then you have landed
+                to the right place. GigaFlop builds tested and customized
+                Uniswap clone script which allows you to launch a stable
+                decentralized exchange(DEX) and get started quickly! Our script
+                incorporates all the features of popular DEXs such as farming,
+                stacking and token swap.
+              </p>
+            </div>
+            <div class="service_box-3 service_box">
+              <div class="">
+                <img
+                  src="//a6e8z9v6.stackpathcdn.com/infinite/homepages/main3/wp-content/uploads/sites/27/2019/03/icon-svc3.png"
+                  alt=""
+                  width="48"
+                  height="51"
+                  title="icon-svc3"
+                />
+              </div>
+              <h3 class="">
+                <a href="https://gigafloptechlab.com/pancake-swap-clone/"
+                  >Pancake swap clone</a
+                >
+              </h3>
+              <p>
+                We offer pancake swap clone script development which helps to
+                create your own DeFi based DEX. The Pancake Swap Clone is used
+                to launch a smart contract based DeFi Decentralized Exchange
+                Platform working with the features involved in Pancake Swap.
+                Pancake swap clone script is also a food-based Decentralized
+                exchange that works efficiently on the Binance smart chain
+                contract(BSC).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="service_boxes service_boxes-3">
+            <div class="service_box-7 service_box">
+              <div class="">
+                <img
+                  src="/wp-content/uploads/2022/04/wallet.png"
+                  alt=""
+                  width="54"
+                  height="54"
+                  title="icon-svc1"
+                />
+              </div>
+              <h3 class="">Cryptocurrency Wallet Development Services</h3>
+              <p>
+                Blockchain wallets allow users to earn, monitor and transfer
+                virtual currencies. It is digital software that runs on a
+                blockchain and stores private and public keys as well as
+                monitors. We offer enterprize level cryptocurrency wallet
+                development services.
+              </p>
+            </div>
+
+            <div class="service_box-8 service_box">
+              <div class="">
+                <img
+                  src="/wp-content/uploads/2022/04/cryptocurrency.png"
+                  alt=""
+                  width="46"
+                  height="51"
+                  title="icon-svc2"
+                />
+              </div>
+              <h3 class="">
+                <a
+                  href="https://gigafloptechlab.com/cryptocurrency-creation-services/"
+                  >Cryptocurrency Creation Services
+                </a>
+              </h3>
+              <p>
+                We are a global cryptocurrency development company, providing
+                excellent cryptocurrency development services to help our
+                clients increase their ROI. Our cryptocurrency developers work
+                sincerely and dedicatedly to create robust, unique and
+                decentralized crypto coins that provide competitive advantages
+                to stand out.
+              </p>
+            </div>
+            <div class="service_box-9 service_box">
+              <div class="">
+                <img
+                  src="/wp-content/uploads/2022/04/game-console.png"
+                  alt=""
+                  width="46"
+                  height="51"
+                  title="icon-svc2"
+                />
+              </div>
+              <h3 class="">NFT Game Development</h3>
+              <p>
+                Introducing the NFT Gaming Platform, Gigaflop is the only agency
+                where you can get a fully functinal NFT games with the genuine
+                and unconvential digital gaming assets such as characters,
+                weapons etc.Our top notch cryptocurrency game development
+                services are just enough to make you feel proud of your next big
+                gaming product
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="purchasing_section">
+      <div class="container">
+        <div class="purchasing_section_inner">
+          <div class="purchasing_section_contentPart">
+            <h2>Let’s work together.</h2>
+            <h4>
+              Let’s discuss your blockchain project and let us help you with
+              every aspect of it.
+            </h4>
+            <h6>
+              Proudly providing our blockchain development services in USA,
+              Australia, Canada and all European countries.
+            </h6>
+          </div>
+          <div class="purchasing_section_buttonPart">
+            <button>
+              <a href="https://wa.me/+917007545790"> Get an estimate </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

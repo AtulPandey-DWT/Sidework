@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    max-width:1300px;
+    margin: 0 auto;
+}
+section.outerSection {
+    text-align: center;
+}
+section.outerSection {
+    text-align: center;
+    color: #422439;
+    background: #FFF0DF;
+}
+.innerSection {
+    padding: 60px;
+}
+section.outerSection h2.title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+}
+section.outerSection p.subtitle {
+    padding: 0 60px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+section.outerSection .sbmtBtn button {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    fill: #422439;
+    color: #422439;
+    background-color: #FBC73B;
+    border-radius: 30px 30px 30px 30px;
+    padding: 15px 30px 15px 30px;
+    border: navajowhite;
+}

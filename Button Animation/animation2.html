@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .btn {
+      position: relative;
+      background-color: transparent;
+      cursor: pointer;
+      min-width: 150px;
+      padding: 15px 20px;
+      color: rgb(255, 255, 255);
+      border: 1px solid #f04f36;
+    }
+
+    /*--- btn-1 ---*/
+    .btn-1::before {
+      background-color: #f04f36;
+      transition: 0.3s ease-out;
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    .btn-1:hover {
+      color: #f04f36;
+      transition: 0.2s 0.1s;
+    }
+
+    .btn.hover-filled-slide-right:hover::before {
+      width: 0%;
+    }
+  </style>
+  <body>
+    <div class="btn-holder">
+      <button class="btn btn-1 hover-filled-slide-right">hover me</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    section.content p {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    section.content {
+      margin-top: 200px;
+      height: 300px;
+      overflow-y: scroll;
+    }
+    ul.navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    ul.navigation li {
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <!-- <section class="content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero veniam
+        natus magnam minus ducimus velit et hic dolore asperiores aliquam,
+        minima dolores. Deserunt ipsum nobis itaque ex similique quo laboriosam
+        aut nulla in praesentium odit accusamus quidem blanditiis enim autem,
+        accusantium fugiat fugit! Vel totam doloribus et facilis autem officia
+        velit reiciendis quasi eligendi illo nemo placeat esse voluptates
+        expedita ex maiores deleniti voluptatibus aspernatur, qui maxime. Magnam
+        quia ducimus deleniti aliquam iste! Dicta obcaecati eos expedita, ullam
+        labore alias adipisci possimus nobis maxime! Sunt odit commodi dicta
+        nihil dolorem hic, eum ipsam incidunt minus, porro, officiis doloremque
+        nulla temporibus dolores sed vel totam mollitia perferendis blanditiis
+        saepe molestias. Explicabo possimus atque optio enim voluptatem fuga
+        doloribus ipsam distinctio placeat id? Blanditiis dicta architecto
+        voluptatibus tempore? Omnis libero facilis dolorem corporis officia,
+        sint quis odit culpa temporibus cum consequatur ullam dicta. Hic, alias
+        labore cumque esse voluptas corporis pariatur laboriosam aut cupiditate
+        rem repellat sint nesciunt sunt in est officiis dolor quaerat. Iusto
+        fugit eveniet vitae fugiat natus asperiores, consequuntur cupiditate
+        voluptates id eum. Similique nulla temporibus aspernatur facere nobis
+        voluptate beatae eum a officia. Rem, asperiores? Nulla minima aperiam
+        rerum! Labore placeat sapiente minima. Reprehenderit natus tenetur quis
+        accusantium. Ipsam molestias enim iusto nisi consectetur praesentium,
+        omnis iure commodi maxime numquam culpa reiciendis doloribus hic
+        aliquid! Neque non qui architecto praesentium in mollitia voluptate,
+        corrupti, ad laudantium illum quas excepturi nesciunt? Repellat et, at,
+        suscipit dolore delectus, assumenda nisi quod est totam voluptatum
+        magnam ratione illum itaque sunt esse? Minus, dignissimos assumenda
+        optio repellat quas hic quis aspernatur a ab numquam nisi eum in
+        deleniti adipisci tempora quisquam blanditiis eligendi nemo. Ducimus
+        consectetur dolor, illo necessitatibus amet odio maiores molestias ab
+        harum voluptates doloribus sequi sint, blanditiis voluptas vero vel
+        itaque. Voluptate labore qui culpa ea error aliquam impedit optio,
+        minima placeat ullam mollitia magni dolor enim! Illo velit provident,
+        qui odit doloremque hic explicabo nesciunt quae veniam nihil labore.
+        Voluptatum, rerum.
+      </p>
+      <video src="test.mp4"></video>
+      <video src="test.mp4"></video>
+      <video src="test.mp4"></video>
+      <video src="test.mp4"></video>
+      <video src="test.mp4"></video>
+    </section> -->
+    <section>
+      <video id="slider" autoplay muted loop>
+        <source src="" type="video/mp4" />
+      </video>
+
+      <ul class="navigation">
+        <li
+          onclick="videoUrl('test.mp4')"
+          style="
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            list-style: none;
+          "
+        >
+          <img src="" alt="" />
+          <!-- <video src="test.mp4"></video> -->
+        </li>
+        <li
+          onclick="videoUrl('')"
+          style="
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            list-style: none;
+          "
+        >
+          <img src="" alt="" />
+        </li>
+        <li
+          onclick="videoUrl('')"
+          style="
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            list-style: none;
+          "
+        >
+          <img src="" alt="" />
+        </li>
+        <li
+          onclick="videoUrl('')"
+          style="
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            list-style: none;
+          "
+        >
+          <img src="" alt="" />
+        </li>
+        <li
+          onclick="videoUrl('')"
+          style="
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            list-style: none;
+          "
+        >
+          <img src="" alt="" />
+        </li>
+        <li
+          onclick="videoUrl('')"
+          style="
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            list-style: none;
+          "
+        >
+          <img src="" alt="" />
+        </li>
+        <li
+          onclick="videoUrl('')"
+          style="
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            list-style: none;
+          "
+        >
+          <img src="" alt="" />
+        </li>
+      </ul>
+    </section>
+    <script>
+      function videoUrl(x) {
+        document.getElementById("slider").src = x;
+        console.log("Hyyy");
+      }
+    </script>
+  </body>
+</html>
